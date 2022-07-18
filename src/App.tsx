@@ -1,5 +1,9 @@
-import './App.css';
+import { Editor } from './components/Editor';
 
 export const App: React.FC = () => {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Editor />
+    </div>
+  );
 };

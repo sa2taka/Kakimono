@@ -13,7 +13,8 @@
     "prettier:write": "prettier --write \"(src|__tests__)/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.0.2",
+    "@lexical/react": "^0.3.7",
+    "lexical": "^0.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
