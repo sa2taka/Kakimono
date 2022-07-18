@@ -3,7 +3,7 @@
   "build": {
     "beforeBuildCommand": "yarn build",
     "beforeDevCommand": "yarn dev",
-    "devPath": "http://localhost:5173",
+    "devPath": "http://localhost:3000",
     "distDir": "../dist"
   },
   "package": {
@@ -11,6 +11,12 @@
     "version": "0.1.0"
   },
   "tauri": {
+    "pattern": {
+      "use": "isolation",
+      "options": {
+        "dir": "../dist-isolation"
+      }
+    },
     "allowlist": {
       "all": true
     },
@@ -29,7 +35,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.sa2taka.kakimono",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
