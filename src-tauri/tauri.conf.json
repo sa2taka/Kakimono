@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "kakimono",
+    "productName": "kakimonom",
     "version": "0.1.0"
   },
   "tauri": {

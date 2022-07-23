@@ -13,7 +13,10 @@
     "prettier:write": "prettier --write \"(src|__tests__)/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
+    "@codemirror/lang-markdown": "^6.0.0",
+    "@codemirror/language-data": "^6.1.0",
     "@lexical/react": "^0.3.7",
+    "@uiw/react-codemirror": "^4.11.4",
     "lexical": "^0.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -25,6 +28,8 @@
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
+    "@vanilla-extract/css": "^1.7.2",
+    "@vanilla-extract/vite-plugin": "^3.2.1",
     "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.20.0",
     "eslint-config-airbnb": "^19.0.4",

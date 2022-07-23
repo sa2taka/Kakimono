@@ -1,9 +1,9 @@
-import { Editor } from './components/Editor';
+import { Main } from './windows/Main';
 
 export const App: React.FC = () => {
   return (
     <div className="App">
-      <Editor />
+      <Main />
     </div>
   );
 };
