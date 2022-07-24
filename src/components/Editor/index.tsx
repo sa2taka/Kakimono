@@ -1,14 +1,17 @@
-import { style } from '@vanilla-extract/css';
 import React from 'react';
+import { ViewUpdate } from '@codemirror/view';
 import { Core } from './Core';
-import { rootStyle } from './theme/index.css';
+import { rootStyle } from './style/index.css';
 
-interface Props {}
+interface Props {
+  value: string;
+  onChange?: (value: string, viewUpdate: ViewUpdate) => void;
+}
 
-export const Editor: React.FC<Props> = ({}) => {
+export const Editor: React.FC<Props> = ({ value, onChange }) => {
   return (
     <div className={rootStyle}>
-      <Core />
+      <Core onChange={onChange} value={value} />
     </div>
   );
 };

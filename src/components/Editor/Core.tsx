@@ -1,25 +1,23 @@
 import React from 'react';
 
 import CodeMirror from '@uiw/react-codemirror';
+import { ViewUpdate } from '@codemirror/view';
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
 import { languages } from '@codemirror/language-data';
 
-interface Props {}
+interface Props {
+  onChange?: (value: string, viewUpdate: ViewUpdate) => void;
+  value: string;
+}
 
-const onError = (error: any) => {
-  console.error(error);
-};
-
-export const Core: React.FC<Props> = ({}) => {
-  const onChange = React.useCallback((value: string, viewUpdate: any) => {},
-  []);
+export const Core: React.FC<Props> = ({ value, onChange }) => {
   return (
     <CodeMirror
       height="100%"
       extensions={[
         markdown({ base: markdownLanguage, codeLanguages: languages }),
       ]}
-      value="#hoge\nfuga *foo*"
+      value={value}
       onChange={onChange}
     />
   );
