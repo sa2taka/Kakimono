@@ -1,12 +1,11 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 
-import CodeMirror from '@uiw/react-codemirror';
-import { ViewUpdate } from '@codemirror/view';
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
 import { languages } from '@codemirror/language-data';
-import { useRecoilState } from 'recoil';
-import { currentMarkdownState } from '../../states/markdown';
+import { ViewUpdate } from '@codemirror/view';
+import CodeMirror from '@uiw/react-codemirror';
 
+import './style/hackEditor.css';
 interface Props {
   value: string;
   onChange?: (value: string, viewUpdate: ViewUpdate) => void;
@@ -15,12 +14,13 @@ interface Props {
 export const Core: React.FC<Props> = ({ value, onChange }) => {
   return (
     <CodeMirror
-      height="100%"
+      minHeight="100%"
       extensions={[
         markdown({ base: markdownLanguage, codeLanguages: languages }),
       ]}
       value={value}
       onChange={onChange}
+      style={{ height: '100%' }}
     />
   );
 };

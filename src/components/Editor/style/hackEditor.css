@@ -1,0 +1,11 @@
+.cm-editor .cm-lineNumbers {
+  min-width: 4em;
+}
+
+.cm-editor .cm-gutters {
+  background-color: inherit;
+}
+
+.cm-editor.cm-focused {
+  outline: none !important;
+}
