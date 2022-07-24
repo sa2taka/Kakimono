@@ -11,7 +11,7 @@ interface Props {
 export const Editor: React.FC<Props> = ({ value, onChange }) => {
   return (
     <div className={rootStyle}>
-      <Core onChange={onChange} value={value} />
+      <Core value={value} onChange={onChange} />
     </div>
   );
 };

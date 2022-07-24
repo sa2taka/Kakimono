@@ -1,13 +1,10 @@
-import React, { useMemo } from 'react';
-import { Loadable } from '../../commons/Loadable';
-import { parse } from '../../libs/markdown/parse';
+import React from 'react';
 
 interface Props {
-  loadableHtml: Loadable<string>;
+  html: string;
 }
 
-export const Preview: React.FC<Props> = ({ loadableHtml }) => {
-  const html = loadableHtml.getOrThrow();
+export const Preview: React.FC<Props> = ({ html }) => {
   return (
     <div>
       <div dangerouslySetInnerHTML={{ __html: html }} />

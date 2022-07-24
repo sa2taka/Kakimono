@@ -5,7 +5,8 @@
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier"
+    "prettier",
+    "plugin:react-hooks/recommended"
   ],
   "plugins": ["react", "@typescript-eslint", "unused-imports"]
 }
