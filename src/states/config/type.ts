@@ -8,6 +8,6 @@ export type WindowSize = {
     };
   };
 };
-export type Config = {
+export type KakimonoConfig = {
   windowSize: WindowSize;
 };

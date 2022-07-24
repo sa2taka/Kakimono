@@ -6,24 +6,24 @@ import { Preview } from '../Preview';
 import { editor, preview, root } from './style/index.css';
 import { ViewUpdate } from '@codemirror/view';
 import {
-  currentMarkdownState,
-  htmlFromCurrentMarkdownState,
-} from '../../states/markdown';
+  currentDocumentState,
+  htmlFromCurrentDocumentState,
+} from '../../states/document';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 interface Props {}
 
 const EditorContainer = () => {
-  const [value, setValue] = useRecoilState(currentMarkdownState);
+  const [document, setDocument] = useRecoilState(currentDocumentState);
   const onChange = useCallback((value: string, viewUpdate: ViewUpdate) => {
-    setValue(value);
+    setDocument({ ...document, content: value });
   }, []);
 
-  return <Editor value={value} onChange={onChange} />;
+  return <Editor value={document.content} onChange={onChange} />;
 };
 
 const PreviewContainer = () => {
-  const html = useRecoilValue(htmlFromCurrentMarkdownState);
+  const html = useRecoilValue(htmlFromCurrentDocumentState);
 
   return <Preview html={html} />;
 };
